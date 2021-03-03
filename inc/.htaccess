@@ -1,0 +1,11 @@
+order allow,deny
+deny from all
+
+#<Files "\.(inc)$">
+#order allow,deny
+#deny from all
+#</Files>
+
+<Files "price.json">
+allow from all
+</Files>

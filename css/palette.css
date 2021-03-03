@@ -1,0 +1,5 @@
+		.couleur {float:left; width:216px; height:24px; padding-bottom:3px;font-size:10px; margin-right:5px}
+		.couleur div{float:left; height:24px; width:80px; border:0px solid #ccc; margin-right:3px}
+		.widths  {float:right;height:24px;margin-right:2px;}
+		.nom_couleur {font-weight:bold;}
+		.ref_couleur {font-style:italic}

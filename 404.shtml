@@ -1,0 +1,20 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+<title>Страница не найдена</title>
+</head>
+<body>
+<CENTER>
+<H1><a href="http://www.gravis.com.ua"><!--#echo var="HTTP_HOST" --></a></H1>Ошибка <!--#echo var="REDIRECT_STATUS" --><br><br>
+<H2>Ой, Вы наверное ошиблись...<br>
+Здесь ничего нет!<br></H2>
+
+<font size=3><strong>Запрашиваемый URL:</strong></font> http://<!--#echo var="HTTP_HOST" --><!--#echo var="REQUEST_URI" --><br>
+<font size=3><strong>Ваш IP:</strong></font> <!--#echo var="REMOTE_ADDR" --><br>
+<font size=3><strong>Ваш браузер:</strong></font> <!--#echo var="HTTP_USER_AGENT" -->
+</CENTER>
+<!-- 
+                                                                                                                                
+--> 
+</body>
+</html>

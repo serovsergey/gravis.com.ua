@@ -1,0 +1,10 @@
+Options +MultiViews
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule  ^(.+) index.php
+</IfModule>
+
+php_value default_charset «utf8»

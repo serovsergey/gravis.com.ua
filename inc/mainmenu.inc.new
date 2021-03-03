@@ -1,0 +1,174 @@
+<?
+	$menu = array(
+		"main" => array(
+			"caption"=> "Главная",
+			"title"=>  "Главная", 
+			"desc" =>  "Добро пожаловать",
+			"hint" =>  "Главная страница",
+			"url"  =>  $site_name,
+			"file" =>  "content/title.php"
+			),
+		"potolki" => array(
+			"caption"=> "Натяжные потолки",
+			"title"=>  "Натяжные потолки", 
+			"desc" =>  "Натяжные потолки",
+			"hint" =>  "Натяжные потолки",
+			"items"=> array(
+				"prices" => array(
+					"caption"=> "Цены",
+					"title"=>  "Цены", 
+					"desc" =>  "Порядок расчета цены",
+					"hint" =>  "Как расчитывается цена натяжного потолка",
+					"url"  =>  $site_name."*",
+					"file" =>  "content/price.php"
+					), 
+				"how_to_order" => array(
+					"caption"=> "Как заказать",
+					"title"=>  "Порядок заказа", 
+					"desc" =>  "Порядок заказа натяжного потолка",
+					"hint" =>  "Порядок заказа натяжного потолка: что за чем",
+					"url"  =>  $site_name."*",
+					"file" =>  "content/poryadok.php"
+					), 
+				"palette" => array(
+					"caption"=> "Палитра цветов",
+					"title"=>  "Палитра цветов", 
+					"desc" =>  "Палитра цветов пленки",
+					"hint" =>  "Палитра цветов пленки",
+					"url"  =>  $site_name."*",
+					"file" =>  "content/palette.php"
+					),
+				"calculator" => array(
+					"caption"=> "Калькулятор",
+					"title"=>  "Калькулятор", 
+					"desc" =>  "Расчет цены натяжного потолка по параметрам",
+					"hint" =>  "Расчет цены натяжного потолка по размерам, прайс-лист",
+					"url"  =>  $site_name."*",
+					"file" =>  "content/calc.php"
+					),
+				"install_instruction" => array(
+					"caption"=> "Инструкция <br/>по подготовке <br/>к монтажу",
+					"title"=>  "Инструкция по подготовке к монажу", 
+					"desc" =>  "Инструкция по подготовке помещения к монтажу натяжного потолка",
+					"hint" =>  "Инструкция по подготовке помещения к монтажу натяжного потолка",
+					"url"  =>  $site_name."*",
+					"file" =>  "content/instruct.php"
+					), 
+				"care" => array(
+					"caption"=> "Уход за потолком",
+					"title"=>  "Инструкция по уходу за натяжным потолком", 
+					"desc" =>  "ИНСТРУКЦИЯ ПО ЭКСПЛУАТАЦИИ",
+					"hint" =>  "Инструкция по уходу за натяжным потолком",
+					"url"  =>  $site_name."*",
+					"file" =>  "content/care.php"
+					),  
+				"sertificates" => array(
+					"caption"=> "Сертификаты",
+					"title"=>  "Сертификаты", 
+					"desc" =>  "Сертификаты",
+					"hint" =>  "Сертификаты СЭС и пожарные",
+					"url"  =>  $site_name."gallery/sertificates/",
+					"file" =>  "content/cert.php"
+					), 
+				"articles" => array(
+					"caption"=> "Статьи",
+					"title"=>  "Статьи", 
+					"desc" =>  "Общая информация о натяжных потолках",
+					"hint" =>  "Статьи о натяжных потолках",
+					"url"  =>  $site_name."*",
+					"file" =>  "content/info.php"
+					)
+				)
+			),
+		"okna" => array(
+			"caption"=> "",
+			"title"=>  "", 
+			"desc" =>  "",
+			"hint" =>  "",
+			"items"=> array(
+				"info" => array(
+					),
+				"price" => array(
+					)
+				)
+			),
+		"sat" => array(
+			"caption"=> "Спутниковое ТВ",
+			"title"=>  "Спутниковое ТВ", 
+			"desc" =>  "Спутниковое ТВ",
+			"hint" =>  "Спутниковое ТВ",
+			"items"=> array(
+				"info" => array(
+					),
+				"price" => array(
+					)
+				)
+			),
+		"ps" => array(
+			"caption"=> "Профильные системы",
+			"title"=>  "Профильные системы", 
+			"desc" =>  "Профильные системы",
+			"hint" =>  "Профильные системы",
+			"items"=> array(
+				"vorota" => array(
+					"caption"=> "Гаражные ворота",
+					"title"=>  "Гаражные ворота", 
+					"desc" =>  "Гаражные ворота",
+					"hint" =>  "Гаражные ворота",
+					"items"=> array(
+						)
+					),
+				"rollet" => array(
+					)
+				),
+			),
+		"gallery" => array(
+			"caption"=> "Фотогалерея",
+			"title"=>  "Фотогалерея, видео, файлы", 
+			"desc" =>  "Фотогалерея, видео, файлы",
+			"hint" =>  "Фото натяжных потолков, проекты, видео и другие файлы",
+			"url"  =>  $site_name."*",
+			"file" =>  "content/gallery.php"
+			), 
+		"links" => array(
+			"caption"=> "Ссылки",
+			"title"=>  "Ссылки", 
+			"desc" =>  "Полезные ссылки",
+			"hint" =>  "Полезные ссылки",
+			"url"  =>  $site_name."*",
+			"file" =>  "content/links.php"
+			), 
+		"how_to_find" => array(
+			"caption"=> "Как нас найти",
+			"title"=>  "Как нас найти", 
+			"desc" =>  "Как нас найти",
+			"hint" =>  "Как нас найти - карта",
+			"url"  =>  $site_name."*",
+			"file" =>  "content/where.php"
+			), 
+		"forum" => array(
+			"caption"=> "Форум",
+			"title"=>  "Форум", 
+			"desc" =>  "Форум",
+			"hint" =>  "Обсуждение вопросов по натяжным потолкам",
+			"url"  =>  "http://forum.gravis.com.ua".$ext_link_tag,
+			"file" =>  "content/forum.php"
+			), 
+		"site_search" => array(
+			"caption"=> "Поиск по сайту",
+			"title"=>  "Поиск", 
+			"desc" =>  "Поиск по сайту",
+			"hint" =>  "Поиск по сайту",
+			"url"  =>  $site_name."*",
+			"file" =>  "content/search.php"
+			), 
+		"webmail" => array(
+			"caption"=> "Почта",
+			"title"=>  "Почта", 
+			"desc" =>  "Веб-почта (для внутреннего пользования)",
+			"hint" =>  "Веб-почта (для внутреннего пользования)",
+			"url"  =>  $site_name."*",
+			"file" =>  ""
+			)
+		);
+?>

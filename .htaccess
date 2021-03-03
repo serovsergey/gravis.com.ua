@@ -1,0 +1,70 @@
+Options +MultiViews
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule  ^(.+) index.php
+	
+	RewriteCond %{SERVER_PORT} !^443$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+	RewriteCond %{HTTP_HOST} ^www.gravis.com.ua$ [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^(.*)$ https://gravis.com.ua/$1 [R=301,L]
+
+	RewriteCond %{THE_REQUEST} /(.*)index.php.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule .* /%1 [R=301,L]
+
+	RewriteCond %{THE_REQUEST} /(.*)index.html.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule .* /%1 [R=301,L]
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+</IfModule>
+
+# Включаем кэш в браузерах посетителей
+<ifModule mod_headers.c>
+	# Все html и htm файлы будут храниться в кэше браузера один день
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=43200"
+	</FilesMatch>
+	# Все css, javascript и текстовые файлы будут храниться в кэше браузера одну неделю
+	<FilesMatch "\.(js|css|txt)$">
+		Header set Cache-Control "max-age=604800"
+	</FilesMatch>
+	# Все флэш файлы и изображения будут храниться в кэше браузера один месяц
+	<FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+		Header set Cache-Control "max-age=2592000"
+	</FilesMatch>
+	# Отключаем кеширование php и других служебных файлов
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>
+
+
+<ifModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+php_value default_charset «utf8»

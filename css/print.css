@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+body {
+	background-image:none;
+}
+
+#gravis {
+	box-shadow: none;-moz-box-shadow: none;-webkit-box-shadow: none;
+	border:0px;
+	width:auto;
+}
+
+#logo, #menu, #left_banners, #right, #counters {
+	display: none;
+}
+
+#tel:before {
+	content: "Компания \0022Гравис\0022\0020";
+}
+
+#main,
+#content,
+#container ,
+#menu {
+	width:auto;
+	background:#fff;
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+
+#calc_details {
+	display:block;
+}
+
+section#content {
+	margin: auto;
+}
+
+#toTop {
+	visibility: hidden;
+}

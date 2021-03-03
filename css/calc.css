@@ -1,0 +1,327 @@
+ul#forms_list {
+	padding: 0px 0px 0px 4px;
+    display: inline-flex;
+    font: bold 11px Verdana, sans-serif;
+}
+
+ul#forms_list li {
+	cursor: pointer;
+    margin: 0px 2px 0px 0px;
+    border: 1px solid #996600;
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+    background: #eee;
+    padding: 4px 4px 5px 4px;
+    transition: .1s linear;
+    box-shadow: 1px -1px 1px 0px rgba(0,0,0,.3);
+	text-indent: 0px;
+}
+
+ul#forms_list li:before   {
+	content: none;
+}
+
+ul#forms_list li svg, img   {
+	margin-right: 2px;
+}
+
+ul#forms_list li:hover   {
+	background: #edc26b;
+	margin: -4px 2px 0px 2px;
+}
+
+ul#forms_list li.current{
+	margin: -4px 2px -2px 2px;
+    background: #FFFFDB;
+}
+
+ul#forms_list li#spec_tab  {
+	background-color: cornsilk;
+	/*visibility: hidden;*/
+}
+
+ul#forms_list li#spec_tab:hover {
+	background-color: coral;
+}
+
+ul#forms_list li#spec_tab.current{
+	/*background-color: cornsilk;*/
+	background: linear-gradient(0deg, rgba(255,255,204,1) 0%, rgba(255,248,220,1) 100%);
+}
+
+ul#forms_list li#spec_tab.current:hover{
+	background-color: cornsilk;
+}
+
+#tab_wrapper {
+	border: 1px solid #996600;
+	background-color:#FFFFDB;
+	box-shadow: 2px -2px 2px rgba(0,0,0,.3);
+	border-radius:5px;
+}
+
+#input_form label {
+	display: flex;
+	padding: 2px;
+	/*border-bottom: 1px solid #fee;*/
+}
+
+#input_form label > span{
+	width: 128px;
+	text-align: right;
+	align-self: center;
+}
+
+#input_form label.singleline {
+	display: flex;
+}
+	
+#input_form input, select{
+	margin-left: 4px;
+	margin-right: 4px;
+	height: 1.5em;
+	align-self: center;
+}
+
+#input_form select{
+	height: 2.0em;
+}
+
+#input_form input{
+	/*width: 100px;*/	
+}
+
+table.calc_details > caption > div {
+	/*display: inline;
+	padding: 2px;
+	cursor: pointer;*/
+}
+
+.single_caption {
+	margin: auto;
+}
+
+.spec_caption {
+	cursor: pointer;
+}
+
+.input_group {
+	border: 1px solid #e6ba20;
+	margin: 8px 8px;
+	-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;
+	box-shadow: 1px -1px 3px rgba(0,0,0,.4);
+}
+
+.input_group > .group_caption {
+	background-color:#ffeeb3;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	padding: 2px 8px;
+	cursor: pointer;
+	-webkit-border-radius: 8px 8px 0px 0px; -moz-border-radius: 8px 8px 0px 0px; border-radius: 8px 8px 0px 0px;
+}
+
+.input_group:not(.closed) > .group_caption {
+	border-bottom: solid 1px #e6ba20; 
+}
+
+.input_group.closed > .group_caption { 
+	border-radius: 8px 8px 8px 8px;
+}
+
+div.input_group > :first-child::after {
+	float: right;
+	margin: 2px;
+	transform: rotate(180deg);
+	content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='16' width='16' left='4' top='4' version='1.1'><g id='layer12' transform='translate(-180,-626)'><path id='path10839-9-9-8' d='m182 631v1c-0.00012 0.0104-0.00046 0.0208 0 0.0313 0.0112 0.25495 0.12858 0.50987 0.3125 0.6875l5.2188 5.2812 5.1875-5.2812c0.19-0.19 0.28-0.45 0.28-0.72v-1h-1c-0.26529 0-0.53058 0.0931-0.71875 0.28125l-3.75 3.8125-3.7812-3.8125c-0.19463-0.21074-0.46925-0.30316-0.75-0.28125h-1z'/> </g></svg>");
+}
+
+div.input_group.closed > :first-child::after {
+	transform: rotate(0deg);
+}
+
+.input_group > .group_content {
+	padding: 1px;
+}
+
+.input_group > .group_content.closed {
+	display: none;
+}
+	
+#input_form input[type="checkbox"]{
+	margin:4px;
+	width:auto;
+	height: auto;
+	
+}
+
+ul#forms_list > li.editing a{
+	color: red;
+}
+
+ul#forms_list > li.editing a::after {
+	content: "*";
+}
+
+/********************* Calc result **************************/
+table.calc_details.clipboard td{
+	border: solid black thin;
+	background-color: white;
+	color: black;
+}
+
+table.calc_details.clipboard th{
+	border: solid black thin;
+}
+
+table.calc_details {
+	background-color: #fff;
+    margin: auto;
+    width: 100%;
+	border-spacing: 0px;
+	margin-bottom: 4px;
+}
+
+table.calc_details .right {
+	text-align: right;
+}
+
+table.calc_details .left {
+	text-align: left;
+}
+
+table.calc_details .center {
+	text-align: center;
+}
+
+table.calc_details caption {
+	background-color: #edc26b;
+	text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+	/*padding-left: 4px;*/
+}
+
+table.calc_details caption > div {
+	/*height: 36px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	margin: 2px 4px 2px 4px;
+}
+
+table.calc_details th {
+	text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    background: #fff3a7;
+    border-top: 2px solid #edc26b;
+    border-bottom: 1px solid #fff;
+    color: #039;
+    padding: 2px 2px;
+}
+table.calc_details tr:hover td {
+	background: #ffafd1; 
+}
+table.calc_details tr {
+	
+}
+table.calc_details td {
+	font-size: 1em;
+    background: #ffffd1;
+    /* border-bottom: 1px solid #fff; */
+    color: #669;
+    /*border-top: 1px solid transparent;*/
+    padding: 0px 4px;
+}
+
+.table_button_group{
+	float:right;
+	/*margin-right: 4px;*/
+}
+ 
+.table_button_group > img {
+	vertical-align: middle;
+	/*margin: 2px;*/
+	cursor: pointer;
+	height: 16px;
+	padding: 2px;
+}
+
+.table_button_group > .button_divider {
+	margin-right: 6px;
+	border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.table_button_group.height24 > img {
+	height: 24px;
+}
+
+.table_button_group > img:hover {
+	transform: scale(1.25);
+	transition: ease-in-out 0.05s;
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,.5);
+	left: -1px;
+    top: -1px;
+    position: relative;
+}
+
+.table_button_group > img:active {
+	top: 0;
+    left: 0;
+    box-shadow: -1px -1px 1px 0px rgba(0,0,0,.5);
+}
+
+.ui-effects-transfer { border: 2px dotted gray; }
+
+.error-window {
+	position: fixed;
+	z-index: 1000;
+	top: 10px;
+	right: 10px;
+	border: solid 4px red;
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,.5);
+	background-color: #ccc;
+	font-color: red;
+	font-weight: bold;
+	padding: 8px;
+}
+
+@media print {
+	.table_button_group, footer, ul#forms_list, h1, #input_form {
+		display: none;
+	}
+	
+	#tab_wrapper {
+		box-shadow: none;
+		border: none;
+		background-color: inherit;
+		padding-right: 1em;
+	}
+	
+	#tab_content {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.input_group > .group_caption {
+		padding: 8px 8px;
+		cursor: pointer;
+	}
+	
+	#calc_start.ui-button {
+		position: fixed;
+		top: 50%;
+		right: 5%;
+		padding: 1.5em;
+	}
+	
+	#calc_details caption div{
+
+	}
+
+	#calc_details caption img{
+
+	}
+}
