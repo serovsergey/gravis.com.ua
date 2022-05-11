@@ -73,7 +73,7 @@
 			"url"  =>  $site_name."*",
 			"icon" =>  "how.png",
 			"file" =>  "content/poryadok.php"), 
-		"how_to_find" => array(
+		".how_to_find" => array(
 			"caption"=> "Как нас найти",
 			"title"=>  "Как нас найти", 
 			"desc" =>  "Как нас найти",

@@ -105,20 +105,6 @@ include_once($path);
   "logo": "https://gravis.com.ua/img/logo_64.png",
   "image": "https://gravis.com.ua/img/logo_big.png",
   "description": "Натяжные потолки в Херсоне и области",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Мира, 10",
-    "postOfficeBoxNumber": "1",
-    "addressLocality": "Херсон",
-    "postalCode": "73028",
-    "addressCountry": "Украина"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "46.659585",
-    "longitude": "32.647945"
-  },
-  "openingHours": "Mo, Tu, We, Th, Fr 09:00-18:00 Sa 09:00-14:00",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+380(95)287-10-97",
@@ -141,10 +127,10 @@ include_once($path);
 					<div class="logo_text">Компания "Гравис" - Натяжные потолки</div>
 				</a>
 				<div class="header_pic"><img height="150" width="146" src="/img/worker.png" alt=""/></div>
-				<div class="header_info"><b>График работы:</b><br />Пн-Пт: 9:00 - 18:00<br />Сб: 9:00 - 14:00<br />Вс: Выходной<br />Без обеда<br /><a href="<?=$site_name?>how_to_find">Как нас найти</a></div>
+				<div class="header_info"><b>График работы:</b><br />Пн-Пт: 9:00 - 18:00<br />Сб: 9:00 - 14:00<br />Вс: Выходной<br />Без обеда<br /><!--<a href="<?=$site_name?>how_to_find">Как нас найти</a>--></div>
 			</div>
 			<div id="tel">
-				<b>г.Херсон, ул.Мира, 10. Телефоны: (095) 287-10-97, (067) 90-75-200, (095) 704-30-55</b>
+				<b>Телефоны: (095) 287-10-97, (067) 90-75-200</b>
 			</div>
 		</header>
 		<div id="container">

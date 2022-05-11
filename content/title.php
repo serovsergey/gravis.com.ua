@@ -9,6 +9,7 @@ if($header==1) {
 }
 else {
 ?>
+<!------
 <div style="font-weight:bold;text-align: center; color: red;">
 	<div style="position:relative; top: 0">
 		<h2 style="color: red">Уважаемые Клиенты!</h2>
@@ -16,6 +17,7 @@ else {
 	</div>
 </div>
 <img class="img_border center_block" style="filter: grayscale(100%) blur(0px)" src="/img/office.jpg" alt="Фото офиса">
+--->
 <p align="justify"><font size="+1"><strong>ЧП «Гравис Люкс»</strong></font> - стабильно развивающаяся, отлично зарекомендовавшая себя на рынке г. Херсона и области компания, основанная весной 2008 года и по сей день неустанно радующая своих клиентов высочайшим качеством материалов, монтажа и сервиса. Мы стремимся сделать Ваше с нами сотрудничество максимально удобным!
  </p>
 <p align="justify">К Вашим услугам:</p>
